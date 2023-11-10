@@ -6,3 +6,8 @@ document.getElementById("navBar").addEventListener("click", function(e) {
         });
     }
 });
+
+function scrollToSection() {
+    var section = document.getElementById("target-section");
+    section.scrollIntoView({behavior: "smooth"});
+}
