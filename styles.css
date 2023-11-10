@@ -1,18 +1,18 @@
 body {
     font-family: 'Times New Roman';
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 header {
-    background-color: #f8f9fa;
     text-align: center;
     padding: 20px;
-}
-
-nav ul {
-    display: flex;
-    justify-content: space-around;
-    list-style-type: none;
-    padding: 20px 0;
 }
 
 main {
@@ -30,16 +30,27 @@ footer {
     width: 100%;
 }
 
+
+
 .image-container {
     position: relative;
 }
   
-.image-container .header-text .text {
+.image-container .header-text .text{
     position: absolute;
     top: 100%; /* Start from below the visible area */
     left: 50%;
     transform: translate(-50%, 0);
     color: white;
+}
+
+.navigation {
+    position: absolute;
+    top: 15px; /* Moves the navigation bar 10 pixels higher */
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white; /* Text color */
+    z-index: 1; /* Ensures the navigation stays on top */
 }
 
 .header-text {
@@ -61,6 +72,14 @@ footer {
     color: white;
     animation: flyIn2 2.5s 2.3s forwards, brighten 2.5s 2.3s forwards;
     font-size: 20px;
+}
+
+.header {
+    font-size: 60px;
+}
+
+.break-height {
+    line-height: 2000px;
 }
 
 @keyframes flyIn2 {
