@@ -1,37 +1,46 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>HealthCareCoding</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-   
-    <div class="main-image fit-page image-container">
-        <ul class="navigation">
-            <li><button onclick="scrollToSection()">Our Mission</button></li>
-        </ul>
-        <img class="black-lense" src="codenowhite.gif" alt="Background Image">
-        <div class="header-text">HealthCareCoding</div>
-        <div class="text"><i>The future of hackathons and healthcare.</i></div>
-    </div>
-    <hr style="height:2000px; visibility:hidden;" />
-    <div id="target-section">
-       <center><p class="header" >Our Mission</p></center>
-    </div>
-    <hr style="height:2000px; visibility:hidden;" />
-    <header>
-        <p class="header" >Why Us?</p>
-    </header>
-    <hr style="height:2000px; visibility:hidden;" />
-    <header>
-        <p class="header" >Sponsors</p>
-    </header>
-    <header>
-        <p class="header" >Meet The Team</p>
-    </header>
-    <footer>
-        <p>© 2023 HealthCareCoding</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
-</html>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>HealthCareCoding</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+    
+        <div class="main-image fit-page image-container">
+            <ul class="navigation">
+                <li><button onclick="smoothScroll(document.getElementById('OurMission'))">Our Mission</button></li>
+                <li><button onclick="smoothScroll(document.getElementById('AboutUs'))">About Us</button></li>
+                <li><button onclick="smoothScroll(document.getElementById('FAQ'))">FAQs</button></li>
+                <li><button onclick="smoothScroll(document.getElementById('Sponsors'))">Sponsors</button></li>
+                <li><button onclick="smoothScroll(document.getElementById('TheTeam'))">The Team</button></li>
+            </ul>
+            <img class="black-lense" src="codenowhite.gif" alt="Background Image">
+            <div class="header-text">HealthCareCoding</div>
+            <div class="text"><i>The future of hackathons and healthcare.</i></div>
+        </div>
+        <div style="height:2000px; visibility:hidden;"></div>
+        <div id="OurMission">
+        <center><p class="header" >Our Mission</p></center>
+        </div>
+        <div style="height:2000px; visibility:hidden;"></div>
+        <div id="AboutUs">
+        <center><p class="header" >Why Us?</p></center>
+        </div>
+        <div style="height:2000px; visibility:hidden;"></div>
+        <div id="FAQ">
+        <center><p class="header" >Frequently Asked Questions</p></center>
+        </div>
+        <div style="height:2000px; visibility:hidden;"></div>
+        <div id="Sponsors">
+        <center><p class="header" >Sponsors</p></center>
+        </div>
+        <div style="height:2000px; visibility:hidden;"></div>
+        <div id="TheTeam">
+        <center><p class="header" >Meet The Team</p></center>
+        </div>
+        <footer>
+            <p>© 2023 HealthCareCoding</p>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+    </html>
