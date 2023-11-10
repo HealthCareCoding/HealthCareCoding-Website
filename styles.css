@@ -1,0 +1,122 @@
+body {
+    font-family: 'Times New Roman';
+}
+
+header {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 20px 0;
+}
+
+main {
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.image-container img {
+    width: 100%;
+}
+
+.image-container {
+    position: relative;
+}
+  
+.image-container .header-text .text {
+    position: absolute;
+    top: 100%; /* Start from below the visible area */
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: white;
+}
+
+.header-text {
+    position: absolute;
+    top: 100%; /* Start from below the visible area */
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: white;
+    animation-delay: flyin 2.5s;
+    animation: flyIn 2s 1s forwards, brighten 2s 1s forwards; /* New animation */
+    font-size: 60px;
+}
+
+.text {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: white;
+    animation: flyIn2 2.5s 2.3s forwards, brighten 2.5s 2.3s forwards;
+    font-size: 20px;
+}
+
+@keyframes flyIn2 {
+    from {
+        top: 100%;
+    }
+    to {
+        top: 50%;
+        transform: translate(-50%,);
+    }
+}
+
+@keyframes brighten {
+    0% {
+        filter: brightness(0%);
+    }
+    100% {
+        filter: brightness(100%);
+    }
+
+}
+
+@keyframes flyIn {
+    from {
+        top: 100%;
+    }
+    to {
+        top: 40%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.fit-page {
+    display: flex;
+    height: 100vh; /* Define the height of the container */
+    overflow: hidden; /* Hide anything that exceeds the container */
+}
+
+.fit-page img {
+    object-fit: cover; /* Resize the image to cover the container */
+    width: 100%; /* Make sure the image covers the full width */
+    height: 100%; /* Make sure the image covers the full height */
+}
+
+@keyframes darken {
+    0% {
+        filter: brightness(100%);
+    }
+    100% {
+        filter: brightness(50%);
+    }
+}
+
+.black-lense {
+    animation-name: darken;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+}
+
