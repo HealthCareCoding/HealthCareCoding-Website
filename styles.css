@@ -30,6 +30,29 @@ footer {
     padding: 20px 0;
 }
 
+button {
+    cursor: pointer;
+    outline: 0;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    color: #ffffff;
+    border-color: #7bb0ff;
+    :hover {
+        color: #fff;
+        background-color: #0d6efd;
+        border-color: #0d6efd;
+    }
+
+}
+
 .image-container img {
     width: 100%;
 }
@@ -115,6 +138,39 @@ footer {
     }
 }
 
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.white-nodecor {
+    color: white;
+    text-decoration: none;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s 3.5s forwards;
+}
+
+.black-nodecor {
+    color: black;
+    text-decoration: none;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s 3.5s forwards;
+}
+
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s 3.5s forwards;
+}
+
+
+
 .fit-page {
     display: flex;
     height: 100vh; /* Define the height of the container */
@@ -142,3 +198,31 @@ footer {
     animation-fill-mode: forwards;
 }
 
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button-container button {
+    margin-right: 10px;  /* Adjust as needed */
+}
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+  
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
