@@ -5,19 +5,19 @@
         <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body>
-    
-        <div class="main-image fit-page image-container">
-            <ul class="navigation">
+            <div class="main-image fit-page image-container">
+            <ul class="navigation button-container fade-in">
                 <li><button onclick="smoothScroll(document.getElementById('OurMission'))">Our Mission</button></li>
                 <li><button onclick="smoothScroll(document.getElementById('AboutUs'))">About Us</button></li>
                 <li><button onclick="smoothScroll(document.getElementById('FAQ'))">FAQs</button></li>
                 <li><button onclick="smoothScroll(document.getElementById('Sponsors'))">Sponsors</button></li>
-                <li><button onclick="smoothScroll(document.getElementById('TheTeam'))">The Team</button></li>
+                <li><button><a class="white-nodecor" href="dashboard.html">Dashboard</a></button></li>
             </ul>
             <img class="black-lense" src="codenowhite.gif" alt="Background Image">
             <div class="header-text">HealthCareCoding</div>
             <div class="text"><i>The future of hackathons and healthcare.</i></div>
         </div>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
         <div style="height:2000px; visibility:hidden;"></div>
         <div id="OurMission">
         <center><p class="header" >Our Mission</p></center>
