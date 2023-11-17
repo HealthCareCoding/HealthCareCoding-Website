@@ -2,10 +2,32 @@ html {
     scroll-behavior: smooth;
 }
 
+/* footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+} */
+
+#dashboard {
+    background-image: url("dashboard-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top; /* This will align the top of your image with the top of the webpage */
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
 body {
     font-family: 'Times New Roman';
     margin: 0;
     padding: 0;
+}
+
+.logo {
+    float: left;
+    padding-left: 10px;
+    margin-top: 10px;
 }
 
 ul {
@@ -96,7 +118,7 @@ button {
     left: 50%;
     transform: translate(-50%, 0);
     color: white;
-    animation: flyIn2 2.5s 2.3s forwards, brighten 2.5s 2.3s forwards;
+    animation: flyIn2 2.3s 2.3s forwards, brighten 2.5s 2.3s forwards;
     font-size: 20px;
 }
 
@@ -225,4 +247,8 @@ button {
   
 #myBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
+}
+
+.rounded-corners {
+    border-radius: 10px;
 }
