@@ -312,7 +312,8 @@ button {
 .background-image1, .background-image2 {
     width: 100%; /* Set the width of each div to 100% of the viewport width */
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: cover;
+    background-position: center;
 }
 
 .background-image1 {
