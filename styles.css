@@ -233,12 +233,12 @@ button {
 
 .background-image1 {
     height: 4697px;
-    background-image: url('section1.png');
+    background-image: url('section1.jpg');
   }
   
   .background-image2 {
     height: 4697px;
-    background-image: url('section2.png');
+    background-image: url('section2.jpg');
   }
 
 #navBar {
@@ -246,7 +246,7 @@ button {
 }
 
 #dashboard {
-    background-image: url("dashboard-background.png");
+    background-image: url("dashboard-background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top; /* This will align the top of your image with the top of the webpage */
