@@ -1,32 +1,37 @@
 document.getElementById("navBar").addEventListener("click", function(e) {
-    if(e.target.tagName === 'A'){
-        e.preventDefault();
-        document.querySelector(e.target.getAttribute("href")).scrollIntoView({ 
-            behavior: 'smooth' 
-        });
-    }
+  if(e.target.tagName === 'A'){
+      e.preventDefault();
+      document.querySelector(e.target.getAttribute("href")).scrollIntoView({ 
+          behavior: 'smooth' 
+      });
+  }
 });
 
 function smoothScroll(target) {
-    window.scrollTo({
-        top: target.offsetTop,
-        behavior: 'smooth'
-    });
+  window.scrollTo({
+      top: target.offsetTop,
+      behavior: 'smooth'
+  });
 }
 
-let mybutton = document.getElementById("myBtn");
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function() {
+  const button = document.getElementById('scrollToTopButton');
+  var footer = document.getElementById('footer');
+  var footerRect = footer.getBoundingClientRect();
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
+  if (document.body.scrollTop > 2000 || document.documentElement.scrollTop > 2000) {
+    if (window.innerHeight - footerRect.top > 0) {
+        button.classList.remove('visible'); // hide the button when the footer is in the viewport
+    } else {
+        button.style.position = 'fixed';
+        button.style.bottom = '20px';
+        button.classList.add('visible');
+    }
   } else {
-    mybutton.style.display = "none";
+    button.classList.remove('visible');
   }
-}
+};
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+function scrollToTop() {
+  window.scrollTo({top: 0, behavior: 'smooth'}); // For modern browsers
 }
