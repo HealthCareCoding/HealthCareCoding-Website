@@ -1,15 +1,8 @@
+/* TO ALL WEB DEVELOPMENT MEMBERS: DO NOT REMOVE/DELETE ANY OF THE FOLLOWING CODE WITHOUT PERMISSION */
+/* Affects ALL aspects of Code */
+
 html {
     scroll-behavior: smooth;
-}
-
-#dashboard {
-    background-image: url("dashboard-background.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center top; /* This will align the top of your image with the top of the webpage */
-    height: 100vh;
-    width: 100%;
-    position: relative;
 }
 
 body {
@@ -17,12 +10,6 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
-}
-
-.logo {
-    float: left;
-    padding-left: 20px;
-    margin-top: 10px;
 }
 
 ul {
@@ -50,32 +37,6 @@ footer {
     position: relative; /* Add this line */
 }
 
-.content {
-    flex: 1 0 auto;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    font-size: 20px;
-}
-
-.left {
-    text-align: left;
-    padding-left: 20px;
-}
-
-.right {
-    align-self: flex-end;
-    padding-right: 20px;
-}
-
-.page-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
 button {
     cursor: pointer;
     outline: 0;
@@ -99,71 +60,20 @@ button {
 
 }
 
-.image-container img {
-    width: 100%;
+/* Minor Adjustments that are used in multiple areas */
+
+.left {
+    text-align: left;
+    padding-left: 20px;
 }
 
-
-
-.image-container {
-    position: relative;
-}
-  
-.image-container .header-text .text{
-    position: absolute;
-    top: 100%; /* Start from below the visible area */
-    left: 50%;
-    transform: translate(-50%, 0);
-    color: white;
-}
-
-.navigation {
-    position: absolute;
-    top: 15px; /* Moves the navigation bar 10 pixels higher */
-    right: 20px;
-    color: black; /* Text color */
-    z-index: 1; /* Ensures the navigation stays on top */
-}
-
-.header-text {
-    position: absolute;
-    top: 100%; /* Start from below the visible area */
-    left: 50%;
-    transform: translate(-50%, 0);
-    color: black;
-    animation-delay: flyin 2.5s;
-    animation: flyIn 2s 1s forwards, brighten 2s 1s forwards; /* New animation */
-    font-size: 60px;
-}
-
-.text {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    color: black;
-    animation: flyIn2 2.3s 2.3s forwards, brighten 2.5s 2.3s forwards;
-    font-size: 20px;
+.right {
+    align-self: flex-end;
+    padding-right: 20px;
 }
 
 .header {
     font-size: 60px;
-}
-
-.break-height {
-    line-height: 2000px;
-}
-
-@keyframes flyIn2 {
-    from {
-        top: 100%;
-        opacity: 0;
-    }
-    to {
-        top: 50%;
-        transform: translate(-50%,);
-        opacity: 1;
-    }
 }
 
 @keyframes brighten {
@@ -174,6 +84,11 @@ button {
         filter: brightness(100%);
     }
 
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 @keyframes flyIn {
@@ -188,19 +103,32 @@ button {
     }
 }
 
-@keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+@keyframes flyInButton {
+    from {
+        bottom: 100%;
+    }
+    to {
+        bottom: 20px;
+    }
 }
 
-.black-nodecor {
-    color: black;
-    text-decoration: none;
+@keyframes flyIn2 {
+    from {
+        top: 100%;
+        opacity: 0;
+    }
+    to {
+        top: 50%;
+        transform: translate(-50%,);
+        opacity: 1;
+    }
 }
 
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 2s 3.5s forwards;
+
+.logo {
+    float: left;
+    padding-left: 20px;
+    margin-top: 10px;
 }
 
 .white-nodecor {
@@ -208,72 +136,57 @@ button {
     text-decoration: none;
 }
 
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 2s 3.5s forwards;
+.icons {
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
 }
 
 
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 2s 3.5s forwards;
-}
-
-
-
-.fit-page {
-    display: flex;
-    height: 100vh; /* Define the height of the container */
-    overflow: hidden; /* Hide anything that exceeds the container */
-}
-
-.fit-page img {
-    object-fit: cover; /* Resize the image to cover the container */
-    width: 100%; /* Make sure the image covers the full width */
-    height: 100%; /* Make sure the image covers the full height */
-}
-
-@keyframes darken {
-    0% {
-        filter: brightness(100%);
-    }
-    100% {
-        filter: brightness(50%);
-    }
-}
-
-.black-lense {
-    animation-name: darken;
-    animation-duration: 2.5s;
-    animation-fill-mode: forwards;
-}
-
-.button-container {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.button-container button {
-    margin-right: 10px;  /* Adjust as needed */
+.padding-right {
+    padding-right: 50px;
 }
 
 .rounded-corners {
     border-radius: 10px;
 }
 
-.padding-right {
-    padding-right: 50px;
+/* Somewhat Specific */
+
+#OurMission, #AboutUs, #FAQ {
+    color: white;
 }
 
-.padding-right {
-    padding-right: 50px;
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
 }
 
-.icons {
-    text-decoration: none;
-    width: 30px;
-    height: 30px;
+.header-text {
+    position: absolute;
+    top: 100%; /* Start from below the visible area */
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: white;
+    animation-delay: flyin 2.5s;
+    animation: flyIn 2s 1s forwards, brighten 2s 1s forwards;
+    font-size: 60px;
+    opacity: 0;
 }
+
+.text {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: white;
+    animation: flyIn2 2.3s 2.3s forwards, brighten 2.5s 2.3s forwards;
+    font-size: 20px;
+    opacity: 0;
+}
+
+/* Quite Specific */
 
 #scrollToTopButton {
     display: none;
@@ -291,12 +204,14 @@ button {
     animation: flyInButton 1s forwards;
 }
 
-@keyframes flyInButton {
+@keyframes flyInHeaders {
     from {
-        bottom: 100%;
+        transform: translateY(100vh);
+        opacity: 0;
     }
     to {
-        bottom: 20px;
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 
@@ -325,3 +240,57 @@ button {
     height: 4697px;
     background-image: url('section2.png');
   }
+
+#navBar {
+    color: white;
+}
+
+#dashboard {
+    background-image: url("dashboard-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top; /* This will align the top of your image with the top of the webpage */
+    height: 1808px;
+    width: 100%;
+    position: relative;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navigation {
+    position: absolute;
+    top: 15px; /* Moves the navigation bar 10 pixels higher */
+    right: 20px;
+    color: black; /* Text color */
+    z-index: 1; /* Ensures the navigation stays on top */
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s 3.5s forwards;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button-container button {
+    margin-right: 10px;  /* Adjust as needed */
+}
+/* DO NOT ADD OR REMOVE ANY OF THE CSS ABOVE IF YOU WANT TO EDIT IT LET ME KNOW FIRST. */
+
+/* Irene Add your CSS here */
+
+/* Uday Add Your CSS Here */
+
+/* Susan Add Your CSS Here */
