@@ -35,3 +35,29 @@ window.onscroll = function() {
 function scrollToTop() {
   window.scrollTo({top: 0, behavior: 'smooth'}); // For modern browsers
 }
+
+const elements = document.querySelectorAll('#AboutUs, #OurMission, #FAQ, #Sponsors');
+
+function isInView(el) {
+    const rect = el.getBoundingClientRect();
+    const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+    return rect.top <= windowHeight && rect.bottom >= 0;
+}
+
+function animateElements() {
+    elements.forEach(el => {
+        if (isInView(el)) {
+            el.style.animation = 'flyInHeaders 2s forwards';
+        }
+    });
+}
+
+window.addEventListener('scroll', animateElements);
+
+animateElements();
+
+// Irene Add your JS Here
+
+// Uday Add your JS Here
+
+// Susan Add your JS Here
