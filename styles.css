@@ -1,0 +1,583 @@
+/* TO ALL WEB DEVELOPMENT MEMBERS: DO NOT REMOVE/DELETE ANY OF THE FOLLOWING CODE WITHOUT PERMISSION */
+/* Affects ALL aspects of Code */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Times New Roman';
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer {
+    background-color: #959595;
+    text-align: center;
+    padding: 20px 0;
+    flex-shrink: 0;
+    z-index: 1; /* Add this line */
+    position: relative; /* Add this line */
+}
+
+button {
+    cursor: pointer;
+    outline: 0;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    color: black;
+    border-color: #7bb0ff;
+    :hover {
+        color: #fff;
+        background-color: #0d6efd;
+        border-color: #0d6efd;
+    }
+
+}
+
+/* Minor Adjustments that are used in multiple areas */
+
+.left {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.right {
+    align-self: flex-end;
+    padding-right: 20px;
+}
+
+.header {
+    font-size: 60px;
+}
+
+@keyframes brighten {
+    0% {
+        filter: brightness(0%);
+    }
+    100% {
+        filter: brightness(100%);
+    }
+
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes flyIn {
+    from {
+        top: 100%;
+        opacity: 0;
+    }
+    to {
+        top: 40%; 
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+@keyframes flyInButton {
+    from {
+        bottom: 100%;
+    }
+    to {
+        bottom: 20px;
+    }
+}
+
+@keyframes flyIn2 {
+    from {
+        top: 100%;
+        opacity: 0;
+    }
+    to {
+        top: 50%;
+        transform: translate(-50%,);
+        opacity: 1;
+    }
+}
+
+
+.logo {
+    float: left;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.white-nodecor {
+    color: white;
+    text-decoration: none;
+}
+
+.icons {
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+}
+
+
+.padding-right {
+    padding-right: 50px;
+}
+
+.padding-left {
+    padding-left: 50px;
+}
+
+.rounded-corners {
+    border-radius: 10px;
+}
+
+/* Somewhat Specific */
+
+#OurMission, #AboutUs, #FAQ {
+    color: white;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.header-text {
+    position: absolute;
+    top: 100%; /* Start from below the visible area */
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: white;
+    animation-delay: flyin 2.5s;
+    animation: flyIn 2s 1s forwards, brighten 2s 1s forwards;
+    font-size: 60px;
+    opacity: 0;
+}
+
+.text {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: white;
+    animation: flyIn2 2.3s 2.3s forwards, brighten 2.5s 2.3s forwards;
+    font-size: 20px;
+    opacity: 0;
+}
+
+/* Quite Specific */
+
+#scrollToTopButton {
+    display: none;
+    position: fixed; /* Stay in place */
+    bottom: 20px; /* Position the button */
+    right: 30px; 
+    z-index: 2; /* Make sure it does not hide behind content */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #a5d0e4; /* Set a background color */
+    color: black; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    animation: flyInButton 1s forwards;
+}
+
+@keyframes flyInHeaders {
+    from {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#scrollToTopButton.visible {
+    display: block;
+}
+
+
+#scrollToTopButton:hover {
+    background-color: #0059df; /* Add a dark-grey background on hover */
+}
+
+.backgroundImage {
+    width: 100%; /* Set the width of each div to 100% of the viewport width */
+    background-size: cover;
+    background-position: center;
+    background-image: url('images/hccoding.jpg');
+}
+
+#navBar {
+    color: white;
+}
+
+#dashboard {
+    background-image: url("images/dashboard-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top; /* This will align the top of your image with the top of the webpage */
+    height: 1808px;
+    width: 100%;
+    position: relative;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navigation {
+    position: absolute;
+    top: 15px; /* Moves the navigation bar 10 pixels higher */
+    right: 20px;
+    color: black; /* Text color */
+    z-index: 1; /* Ensures the navigation stays on top */
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s 3.5s forwards;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button-container button {
+    margin-right: 10px;  /* Adjust as needed */
+}
+/* DO NOT ADD OR REMOVE ANY OF THE CSS ABOVE IF YOU WANT TO EDIT IT LET ME KNOW FIRST. */
+
+/* Irene Add your CSS here */
+
+/* Uday Add Your CSS Here */
+
+/* Susan Add Your CSS Here */
+
+#TheTeam p {
+    margin-top: 10px;    /* adjust as needed */
+    margin-bottom: 10px; /* adjust as needed */
+}
+
+.lightgray {
+    color: rgb(105, 105, 105);
+}
+
+.bigtext {
+    font-size: 40px;
+}
+
+.container {
+    width: 100%;
+}
+
+.container2 {
+    width: 100%;
+    margin-left: 100px;
+}
+  
+.centered-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+  
+.center-text {
+    text-align: center;
+}
+  
+.full-width-images {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fixed-dimensions {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 100px;
+    display: block;
+}
+
+.NameText {
+    font-size: 30px;
+}
+
+.TitleText {
+    font-size: 20px;
+}
+
+.paddingRightTeam {
+    margin-right: 250px;
+}
+
+.paddingLeftTeam {
+    margin-left: 250px;
+}
+
+.paddingLeftAdmin {
+    margin-left: 125px;
+}
+  
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 30px;
+    max-width: calc(2 * (200px + 30px));
+    margin-left: 20px;
+
+}
+  
+.image-grid img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 100px;
+}
+
+.container p {
+    font-size: 18px;
+    color: #333;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.centered-text {
+    text-align: center;
+}
+
+.image-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.text-adjust {
+    transform: translateX(-10px);
+}
+
+.specificPadding1 {
+    margin-right: 110px;
+}
+
+.head-text {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.image-text {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+  
+.centered-text2 {
+    width: 100%;
+}
+
+#OurMission{
+    justify-content: center;
+    margin: 0px 50px!important;
+
+    text-align: center;
+    font-size:large;
+    line-height:25px;
+}
+#OurMissionhackathon{
+    font-size: larger;
+    font-weight:bold;
+}
+
+#Sponsors{
+    justify-content: center;
+    text-align: center;
+    
+    margin: 0px 50px !important;
+    line-height:25px;
+    
+}
+#SponsorImages{
+    width: 200px;
+    margin: 0px 20px 20px;
+    resize:both;
+    border-radius:15%;
+
+    transition: all 0.2s ease-in-out;
+}
+
+#SponsorImages:hover{
+    scale: 1.1;
+}
+
+.container3 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.centered-image-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.centered {
+    justify-content: center;
+}
+
+.specificPadding2 {
+    margin-right: 125px;
+}
+
+.centered-text3 {
+    text-align: center;
+    width: 80%; /* adjust as needed */
+    margin: 0 auto; /* centers the text block */
+    display: block;
+}
+
+.marginTop {
+    margin-top: 100px;
+}
+
+.specificPadding3 {
+    margin-right: 75px;
+}
+
+h2 {
+    margin: 20px auto 80px;
+    font-size: 38px;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 1.5;
+  }
+  
+  details {
+    width: 75%;
+    min-height: 5px;
+    max-width: 700px;
+    padding: 45px 70px 45px 45px;
+    margin: 0 auto;
+    position: relative;
+    font-size: 22px;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 15px;
+    box-sizing: border-box;
+    transition: all .3s;
+    background-color: rgba(255, 255, 255, 0.2); 
+  }
+  
+  details + details {
+    margin-top: 20px;
+  }
+  
+  details[open] {
+    min-height: 50px;
+    background-color: #f6f7f8;
+    box-shadow: 2px 2px 20px rgba(0,0,0,.2);
+  }
+  
+  details p {
+    color: #96999d;
+    font-weight: 300;
+  }
+  
+  summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  summary:focus {
+    outline: none;
+    
+  }
+  
+  summary:focus::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 0 5px #7bb0ff;
+  }
+  
+  summary::-webkit-details-marker {
+    display: none
+  }
+  
+  .control-icon {
+    fill: black;
+    transition: .3s ease;
+    pointer-events: none;
+  }
+  
+  .control-icon-close {
+    display: none;
+  }
+  
+  details[open] .control-icon-close {
+    display: initial;
+    transition: .3s ease;
+  }
+  
+  details[open] .control-icon-expand {
+    display: none;
+  }
+
+
+.blackText {
+    color: black;
+}
+
+.control-icon-expand path {
+    fill: rgba(0, 0, 0, 1); /* Change the last value to your desired opacity */
+}
+
+.slightlyOpaque {
+    background-color: rgba(255, 255, 255, 0.5);
+}
