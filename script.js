@@ -61,3 +61,25 @@ animateElements();
 // Uday Add your JS Here
 
 // Susan Add your JS Here
+
+var textArray = [
+  'This is line 1.',
+  'This is line 2.',
+  'This is line 3.'
+];
+var lineIndex = 0;
+var characterIndex = 0;
+
+function typeCharacter() {
+  if (characterIndex < textArray[lineIndex].length) {
+    document.getElementById('line' + (lineIndex + 1)).textContent += textArray[lineIndex].charAt(characterIndex);
+    characterIndex++;
+  } else if (lineIndex < textArray.length - 1) {
+    lineIndex++;
+    characterIndex = 0;
+  } else {
+    clearInterval(intervalId);
+  }
+}
+
+var intervalId = setInterval(typeCharacter, 100);
