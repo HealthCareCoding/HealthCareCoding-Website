@@ -287,7 +287,78 @@ button {
 
 /* Uday Add Your CSS Here */
 
-/* Susan Add Your CSS Here */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 650px);
+    gap: 100px;
+    
+}
+
+.grid-img {
+    padding: 20px;
+    text-align: center;
+
+}
+
+.grid-img img{
+    border-radius: 10%;
+    border: 3px solid white;
+}
+
+.grid-txt {
+    padding: 20px;
+    padding-top: 0px;
+    padding-left: 30px;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(255,255,255,0.1);
+}
+
+
+.explanation {
+    font-size: 24px;
+}
+
+.subheading {
+    font-size: 34px;
+}
+
+:root {
+    --arrow-color: rgba(0,0,0,0.3);
+}
+
+.speech-bubble {
+    position: relative;
+    padding: 15px;
+    border-radius: 10px;
+    padding: 20px;
+    padding-top: 0px;
+    padding-left: 30px;
+    border-radius: 10px;
+    background-color:rgba(0,0,0,0.3);
+    
+    transition: transform 0.3s ease;
+}
+
+.speech-bubble:before {
+    content: '';
+    position: absolute;
+    top: 40%;
+    right: -9.15%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 30px;
+    border-color: transparent transparent transparent var(--arrow-color);
+}
+
+.speech-bubble:hover {
+    transform: scale(1.1);
+    background: url('star.png') no-repeat bottom right,#6D64FF;
+    background-size: 10% auto;
+    --arrow-color: #6d64ff;
+    box-shadow: -5px 10px 5px #2f2d7291;
+}
 
 #TheTeam p {
     margin-top: 10px;    /* adjust as needed */
@@ -659,4 +730,21 @@ h2 {
 #CallUs {
     margin-top: 100px;
     position: absolute;
+}
+
+#CodersImage, #DedicatedTeam, #RishikPresentation, #Skriblio {
+    height: 100%;
+    width: 100%;
+}
+
+#MeetWithUs {
+    text-align: center;
+}
+
+.image-text img, .image-textcontainer img {
+    transition: transform 0.3s ease;
+}
+
+.image-text img:hover, .image-textcontainer img:hover {
+    transform: scale(1.1);
 }
