@@ -27,20 +27,21 @@ body {
 	background-color: rgba(0, 0, 0, 0.6);
 	padding: 20px;
 	border-radius: 5px;
-    	padding: 100px;
+    padding: 10vh; /* Adjusted to be viewport-relative */
+    font-size: 6vmin; /* Adjusted to be viewport-relative */
 }
 
 .countdown {
-	font-size: 3.125em;
-	margin-top: 50px;
+	font-size: 5vmin; /* Adjusted to be viewport-relative */
+	margin-top: 5vh; /* Adjusted to be viewport-relative */
 }
 
 .subtitle {
-    font-size: 4.6875em;
+    font-size: 10vmin; /* Adjusted to be viewport-relative */
     text-decoration: none;
     font-weight: normal;
 }
 
 .title {
-    font-size: 6.25em;
+    font-size: 15vmin; /* Adjusted to be viewport-relative */
 }
