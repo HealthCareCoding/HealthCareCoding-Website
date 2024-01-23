@@ -1,3 +1,17 @@
+function isMobile() {
+
+  const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+  if (regex.test(navigator.userAgent)) {
+    console.log("mobile sad sad")
+    return;
+  } else {
+    console.log("desktop haha")
+    return;
+  }
+}
+
+isMobile();
+
 const second = 1000,
       minute = second * 60,
       hour = minute * 60,
