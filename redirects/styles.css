@@ -1,0 +1,62 @@
+body {
+	margin: 0;
+	padding: 0;
+    font-family: 'Poppins', sans-serif;
+	text-align: center;
+}
+
+.container {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.container img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.mobileContent {
+    text-align: center;
+	top: 50%;
+	left: 50%;
+}
+
+.content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.6);
+	padding: 20px;
+	border-radius: 5px;
+    padding: 10vh; /* Adjusted to be viewport-relative */
+    font-size: 6vmin; /* Adjusted to be viewport-relative */
+}
+
+.countdown {
+	font-size: 5vmin; /* Adjusted to be viewport-relative */
+	margin-top: 5vh; /* Adjusted to be viewport-relative */
+}
+
+.subtitle {
+    font-size: 10vmin; /* Adjusted to be viewport-relative */
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.title {
+    font-size: 15vmin; /* Adjusted to be viewport-relative */
+}
+
+.BigSentence {
+	font-size: 6em;
+}
+
+.SmallSentence {
+	font-size: 3em;
+}
