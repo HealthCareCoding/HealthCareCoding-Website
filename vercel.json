@@ -1,0 +1,5 @@
+{
+  "routes": [
+    { "src": "/", "dest": "/your-custom-homepage.html" }
+  ]
+}
