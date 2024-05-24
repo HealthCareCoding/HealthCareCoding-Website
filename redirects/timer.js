@@ -18,7 +18,7 @@ const second = 1000,
       day = hour * 24;
 
 let launchDate = new Date();
-launchDate = new Date(launchDate.getFullYear() + 0, 4, 2);
+launchDate = new Date(launchDate.getFullYear() + 0, 5, 2);
 
 const countdownFunc = () => {
   const now = new Date(),
